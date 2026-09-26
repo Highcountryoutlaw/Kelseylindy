@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Mountain Lotus Acupuncture | Ancient Healing • Future Energy</title>
+
+  <meta
+    name="description"
+    content="Mountain Lotus Acupuncture — a mystical mountain sanctuary blending acupuncture, traditional healing, nature, and future-facing wellness."
+  />
+
+  <style>
+    :root {
+      --night: #070814;
+      --deep: #0e1024;
+      --violet: #7b4dff;
+      --purple: #b98cff;
+      --lotus: #ffb7e8;
+      --gold: #f6d98b;
+      --cyan: #73e8ff;
+      --white: #f8f5ff;
+      --muted: #bcb8d0;
+      --glass: rgba(255,255,255,.075);
+      --border: rgba(255,255,255,.14);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at 50% -10%, rgba(123,77,255,.35), transparent 38%),
+        radial-gradient(circle at 90% 40%, rgba(115,232,255,.10), transparent 30%),
+        var(--night);
+      color: var(--white);
+      font-family: Inter, Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .16;
+      background-image:
+        radial-gradient(#fff 1px, transparent 1px);
+      background-size: 70px 70px;
+      mask-image: linear-gradient(to bottom, black, transparent 80%);
+      z-index: -1;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    /* NAV */
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      backdrop-filter: blur(18px);
+      background: rgba(7,8,20,.72);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      letter-spacing: .08em;
+    }
+
+    .brand-icon {
+      font-size: 28px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 14px;
+      transition: .25s;
+    }
+
+    .nav-links a:hover {
+      color: var(--white);
+    }
+
+    .wallet {
+      border: 1px solid rgba(185,140,255,.6);
+      background: rgba(123,77,255,.16);
+      padding: 10px 16px;
+      border-radius: 999px;
+      color: white;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      padding-top: 150px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .moon {
+      position: absolute;
+      width: 330px;
+      height: 330px;
+      border-radius: 50%;
+      right: 7%;
+      top: 130px;
+      background:
+        radial-gradient(circle at 35% 30%, #fff8dc, #e9d8ff 45%, #8c6bc4 100%);
+      box-shadow:
+        0 0 40px rgba(238,214,255,.4),
+        0 0 130px rgba(123,77,255,.28);
+      opacity: .92;
+    }
+
+    .moon::after {
+      content: "";
+      position: absolute;
+      inset: -35px;
+      border: 1px solid rgba(115,232,255,.35);
+      border-radius: 50%;
+      transform: rotate(-18deg) scaleY(.32);
+    }
+
+    .ufo {
+      position: absolute;
+      right: 15%;
+      top: 195px;
+      font-size: 65px;
+      filter: drop-shadow(0 0 20px #73e8ff);
+      animation: float 5s ease-in-out infinite;
+      z-index: 2;
+    }
+
+    @keyframes float {
+      0%,100% { transform: translateY(0) rotate(-2deg); }
+      50% { transform: translateY(-18px) rotate(2deg); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 4;
+      max-width: 680px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 14px;
+      border: 1px solid rgba(246,217,139,.35);
+      border-radius: 999px;
+      color: var(--gold);
+      background: rgba(246,217,139,.06);
+      margin-bottom: 20px;
+      font-size: 13px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(52px, 9vw, 105px);
+      line-height: .9;
+      letter-spacing: -.055em;
+      margin-bottom: 25px;
+    }
+
+    .gradient {
+      background: linear-gradient(
+        90deg,
+        #fff,
+        #d9b7ff,
+        #ffb7e8,
+        #73e8ff
+      );
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 19px;
+      line-height: 1.7;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 22px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      font-weight: 800;
+      cursor: pointer;
+      transition: .25s;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--violet), #c45cff);
+      box-shadow: 0 0 30px rgba(123,77,255,.25);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,.05);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 110px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-heading span {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-size: 12px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(35px, 6vw, 62px);
+      margin-top: 12px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      max-width: 650px;
+      margin: 18px auto 0;
+      line-height: 1.7;
+    }
+
+    /* CARDS */
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background:
+        linear-gradient(145deg, rgba(255,255,255,.09), rgba(255,255,255,.025));
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 30px;
+      backdrop-filter: blur(15px);
+      transition: .3s;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(185,140,255,.45);
+      box-shadow: 0 20px 50px rgba(0,0,0,.25);
+    }
+
+    .card-icon {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    /* ACUPUNCTURE EXPLAINER */
+
+    .energy {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+      align-items: stretch;
+    }
+
+    .energy-panel {
+      padding: 45px;
+      border-radius: 30px;
+      background:
+        radial-gradient(circle at top right, rgba(123,77,255,.22), transparent 45%),
+        var(--glass);
+      border: 1px solid var(--border);
+    }
+
+    .energy-panel h3 {
+      font-size: 30px;
+      margin-bottom: 18px;
+    }
+
+    .energy-panel p {
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .meridian {
+      margin-top: 25px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .meridian div {
+      padding: 14px;
+      border-radius: 14px;
+      background: rgba(255,255,255,.045);
+      border: 1px solid rgba(255,255,255,.08);
+    }
+
+    /* LINDY */
+
+    .lindy {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .lindy::before {
+      content: "🐕";
+      position: absolute;
+      right: -15px;
+      bottom: -25px;
+      font-size: 160px;
+      opacity: .12;
+    }
+
+    /* WEB3 */
+
+    .web3 {
+      border-radius: 35px;
+      padding: 55px;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255,183,232,.16), transparent 30%),
+        radial-gradient(circle at 80% 80%, rgba(115,232,255,.13), transparent 30%),
+        rgba(255,255,255,.055);
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .wallet-status {
+      margin: 25px auto;
+      max-width: 500px;
+      padding: 15px;
+      border-radius: 15px;
+      background: rgba(0,0,0,.25);
+      color: var(--muted);
+      font-family: monospace;
+    }
+
+    .pass {
+      margin-top: 30px;
+      display: inline-block;
+      padding: 25px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, rgba(123,77,255,.2), rgba(255,183,232,.12));
+      border: 1px solid rgba(185,140,255,.3);
+    }
+
+    .pass strong {
+      display: block;
+      font-size: 25px;
+      margin-bottom: 8px;
+    }
+
+    /* BOOKING */
+
+    .booking {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.055);
+      color: white;
+      padding: 15px;
+      border-radius: 14px;
+      outline: none;
+      font: inherit;
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    option {
+      background: #101124;
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 45px 0;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    .footer-raven {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .disclaimer {
+      font-size: 11px;
+      max-width: 720px;
+      margin: 20px auto 0;
+      line-height: 1.6;
+      opacity: .65;
+    }
+
+    /* MOBILE */
+
+    @media(max-width: 800px) {
+      .nav-links {
+        display: none;
+      }
+
+      .moon {
+        width: 210px;
+        height: 210px;
+        right: -50px;
+        top: 120px;
+        opacity: .45;
+      }
+
+      .ufo {
+        right: 20%;
+        top: 150px;
+        font-size: 40px;
+      }
+
+      .hero {
+        padding-top: 120px;
+      }
+
+      .hero-content {
+        padding-top: 100px;
+      }
+
+      .grid,
+      .energy,
+      .booking {
+        grid-template-columns: 1fr;
+      }
+
+      .web3 {
+        padding: 30px 20px;
+      }
+
+      section {
+        padding: 75px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="container nav-inner">
+
+      <a href="#" class="brand">
+        <span class="brand-icon">🌸</span>
+        MOUNTAIN LOTUS
+      </a>
+
+      <div class="nav-links">
+        <a href="#healing">Healing</a>
+        <a href="#services">Services</a>
+        <a href="#lindy">Lindy</a>
+        <a href="#web3">Web3</a>
+        <a href="#booking">Contact</a>
+      </div>
+
+      <button class="wallet" onclick="connectWallet()">
+        🪶 Connect Wallet
+      </button>
+
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+  <header class="hero">
+
+    <div class="moon"></div>
+    <div class="ufo">🛸</div>
+
+    <div class="container hero-content">
+
+      <div class="eyebrow">
+        ✨ Ancient Wisdom • Mountain Energy • Future Wellness
+      </div>
+
+      <h1>
+        <span class="gradient">Mountain</span><br />
+        Lotus
+      </h1>
+
+      <p>
+        A mystical sanctuary where traditional acupuncture,
+        mindful healing, nature, and the energy of the mountains
+        come together.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#booking" class="btn btn-primary">
+          🌸 Begin Your Journey
+        </a>
+
+        <a href="#healing" class="btn btn-secondary">
+          ✨ Explore Acupuncture
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- HEALING -->
+  <section id="healing">
+
+    <div class="container">
+
+      <div class="section-heading">
+        <span>The Ancient Path</span>
+        <h2>What is Acupuncture?</h2>
+        <p>
+          Acupuncture is a traditional East Asian medicine practice
+          involving the stimulation of specific points on the body.
+          Many people seek it as part of a broader approach to
+          wellness and symptom management.
+        </p>
+      </div>
+
+      <div class="grid">
+
+        <div class="card">
+          <div class="card-icon">🌿</div>
+          <h3>Balance</h3>
+          <p>
+            Create space for relaxation, body awareness,
+            and a deeper connection with yourself.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🌙</div>
+          <h3>Restoration</h3>
+          <p>
+            A peaceful environment designed to help you
+            slow down and reconnect with your body.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">⚡</div>
+          <h3>Energy</h3>
+          <p>
+            Explore traditional concepts of qi, meridians,
+            and whole-person wellness.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- SERVICES -->
+  <section id="services">
+
+    <div class="container">
+
+      <div class="section-heading">
+        <span>Mountain Lotus Rituals</span>
+        <h2>Wellness Services</h2>
+        <p>
+          Example services for the future Mountain Lotus experience.
+          Customize these around Kelsey's actual training and scope of practice.
+        </p>
+      </div>
+
+      <div class="grid">
+
+        <div class="card">
+          <div class="card-icon">🪷</div>
+          <h3>Acupuncture</h3>
+          <p>
+            Individualized acupuncture sessions in a calm,
+            private environment.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🌬️</div>
+          <h3>Breath & Relaxation</h3>
+          <p>
+            Guided breathing and relaxation practices designed
+            to complement a wellness session.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🌲</div>
+          <h3>Mountain Wellness</h3>
+          <p>
+            Nature-inspired wellness experiences connecting
+            body awareness with the outdoors.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🔥</div>
+          <h3>Moxibustion</h3>
+          <p>
+            Traditional heat-based techniques when appropriate
+            and provided by a qualified practitioner.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🦋</div>
+          <h3>Mindful Reset</h3>
+          <p>
+            A peaceful session focused on slowing down,
+            breathing, and reconnecting.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🌕</div>
+          <h3>Moon Sessions</h3>
+          <p>
+            A future-inspired wellness concept built around
+            seasonal reflection and intention setting.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ENERGY -->
+  <section>
+
+    <div class="container">
+
+      <div class="energy">
+
+        <div class="energy-panel">
+
+          <h3>🌌 The Meridian Map</h3>
+
+          <p>
+            Traditional acupuncture systems describe pathways
+            through which qi is understood to circulate.
+            Practitioners may select acupuncture points based
+            on an individual's presentation.
+          </p>
+
+          <div class="meridian">
+            <div>🌿 Lung • Breath</div>
+            <div>💧 Kidney • Vitality</div>
+            <div>❤️ Heart • Connection</div>
+            <div>🌙 Liver • Flow</div>
+          </div>
+
+        </div>
+
+        <div class="energy-panel">
+
+          <h3>🛸 Ancient Wisdom × Future Vision</h3>
+
+          <p>
+            Mountain Lotus doesn't have to look like every other
+            wellness website. The experience can blend ancient
+            healing traditions with modern digital identity,
+            community, art, and technology.
+          </p>
+
+          <br />
+
+          <p>
+            Think: moonlight, forests, lotus flowers, celestial
+            geometry, wildlife, digital collectibles, and a
+            sanctuary that feels completely her own.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- LINDY -->
+  <section id="lindy">
+
+    <div class="container">
+
+      <div class="card lindy">
+
+        <div class="card-icon">🐕</div>
+
+        <h2>
+          Lindy — Guardian of the Lotus
+        </h2>
+
+        <p style="margin-top:15px; max-width:700px;">
+          Every sanctuary needs a guardian.
+          Lindy watches over Mountain Lotus with four paws,
+          a loyal heart, and absolutely zero interest in
+          pretending she isn't the boss.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#booking" class="btn btn-secondary">
+            🐾 Meet the Mountain Lotus Family
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- WEB3 -->
+  <section id="web3">
+
+    <div class="container">
+
+      <div class="web3">
+
+        <div class="section-heading" style="margin-bottom:20px;">
+
+          <span>Mountain Lotus Digital Sanctuary</span>
+
+          <h2>🌸 Lotus Pass</h2>
+
+          <p>
+            A future Web3 community layer for Mountain Lotus.
+            Collect digital artwork, participate in community
+            experiences, and carry a piece of the sanctuary with you.
+          </p>
+
+        </div>
+
+        <button class="btn btn-primary" onclick="connectWallet()">
+          🪶 Connect Wallet
+        </button>
+
+        <div class="wallet-status" id="walletStatus">
+          Wallet not connected
+        </div>
+
+        <div class="pass">
+
+          <strong>🌸 LOTUS PASS</strong>
+
+          <span>
+            Future digital membership concept
+          </span>
+
+        </div>
+
+        <p style="margin-top:25px;color:var(--muted);font-size:13px;">
+          No blockchain transaction occurs in this demo.
+          Wallet connection is simulated for the prototype.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- BOOKING -->
+  <section id="booking">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <span>Step Into The Sanctuary</span>
+
+        <h2>Begin Your Journey</h2>
+
+        <p>
+          Reach out to Mountain Lotus and start a conversation.
+        </p>
+
+      </div>
+
+      <div class="booking">
+
+        <div class="card">
+
+          <h3>🌙 Mountain Lotus</h3>
+
+          <p style="margin-top:15px;">
+            Acupuncture & wellness<br />
+            Nature • Balance • Connection
+          </p>
+
+          <br />
+
+          <p>
+            📍 Grand Junction / Western Colorado
+          </p>
+
+          <br />
+
+          <p style="color:var(--gold);">
+            ✨ Your body deserves a moment to breathe.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <form onsubmit="sendMessage(event)">
+
+            <input
+              type="text"
+              placeholder="Your name"
+              required
+            />
+
+            <input
+              type="email"
+              placeholder="Your email"
+              required
+            />
+
+            <select required>
+              <option value="">What are you interested in?</option>
+              <option>Acupuncture</option>
+              <option>Wellness consultation</option>
+              <option>Relaxation session</option>
+              <option>Mountain Lotus Pass</option>
+              <option>Other</option>
+            </select>
+
+            <textarea
+              placeholder="Tell us a little about what you're looking for..."
+            ></textarea>
+
+            <button class="btn btn-primary" type="submit">
+              🌸 Send Message
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-raven">
+        🪶🌸🌕
+      </div>
+
+      <strong>
+        MOUNTAIN LOTUS ACUPUNCTURE
+      </strong>
+
+      <p style="margin-top:10px;">
+        Ancient wisdom. Mountain energy. Future vision.
+      </p>
+
+      <p class="disclaimer">
+        This website is a creative prototype. Services, qualifications,
+        claims, pricing, booking information, and health-related
+        information should be reviewed and customized by the actual
+        practitioner before publication. Acupuncture should be provided
+        by appropriately trained and licensed professionals where required.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <script>
+
+    /*
+      ==========================================
+      DEMO WEB3 WALLET
+      ==========================================
+
+      This intentionally DOES NOT connect to a real wallet.
+      It simply demonstrates the user experience.
+    */
+
+    function connectWallet() {
+
+      const status =
+        document.getElementById("walletStatus");
+
+      status.innerHTML =
+        "✨ Demo wallet connected • 0xLOTUS...WANDR";
+
+      document.querySelectorAll(".wallet").forEach(button => {
+        button.innerHTML = "🌸 Lotus Connected";
+      });
+
+    }
+
+
+    /*
+      ==========================================
+      DEMO CONTACT FORM
+      ==========================================
+    */
+
+    function sendMessage(event) {
+
+      event.preventDefault();
+
+      alert(
+        "🌸 Thank you for reaching out to Mountain Lotus. " +
+        "This prototype form is ready to connect to a real booking system."
+      );
+
+    }
+
+  </script>
+
+</body>
+</html>
